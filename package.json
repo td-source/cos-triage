@@ -2,5 +2,10 @@
   "name": "cos-triage-live",
   "version": "2.1.0",
   "private": true,
-  "engines": { "node": ">=20" }
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "better-sqlite3": "^11.7.0",
+    "googleapis": "^171.4.0",
+    "drizzle-orm": "^0.39.3"
+  }
 }
