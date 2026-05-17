@@ -1,5 +1,8 @@
 #!/bin/bash
+set -e
 if [ -n "$GOOGLE_SERVICE_ACCOUNT_KEY" ]; then
-  echo "$GOOGLE_SERVICE_ACCOUNT_KEY" > dist/service-account-key.json
+  # Write to both locations to handle either resolution path
+  echo "$GOOGLE_SERVICE_ACCOUNT_KEY" > /app/service-account-key.json
+  echo "$GOOGLE_SERVICE_ACCOUNT_KEY" > /app/dist/service-account-key.json
 fi
-node dist/index.cjs
+exec node dist/index.cjs
