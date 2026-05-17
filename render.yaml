@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: cos-triage
+    runtime: docker
+    plan: free
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: GOOGLE_SERVICE_ACCOUNT_KEY
+        sync: false
+      - key: AUTH_TOKEN
+        sync: false
